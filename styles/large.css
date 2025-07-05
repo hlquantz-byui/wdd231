@@ -1,0 +1,77 @@
+@media only screen and (min-width: 38rem) {
+
+    header,
+    main,
+    nav,
+    footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+    .about-photo-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-bottom: 20px;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .about-photo-container section {
+        background: var(--background-muted);
+        border-radius: 5px;
+        margin-right: 20px;
+        border: 1px solid #e0e0e0;
+        margin-bottom: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-photo-container section:first-child {
+        flex: 2;
+    }
+
+    .about-photo-container section:last-child {
+        flex: 1;
+        margin-right: 0;
+    }
+
+    .about-photo-container section h2 {
+        background-color: var(--accent);
+        color: #fff;
+        padding: 3px 10px;
+    }
+
+    .about-photo-container section p {
+        background: none;
+    }
+
+    .about-photo-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .course-list {
+        display: grid;
+        /* Use grid for layout */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .course-card {
+        margin: 0;
+    }
+}

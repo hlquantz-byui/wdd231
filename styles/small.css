@@ -1,0 +1,319 @@
+/* =========================
+   CSS Variables
+   ========================= */
+:root {
+    --background-light: #E5EAFA;
+    --background-muted: #C6CCB2;
+    --text-primary: #093824;
+    --text-secondary: #C6CCB2;
+    --accent: #BF4E30;
+    --button: #78FECF;
+    --border-divider: #C6CCB2;
+}
+
+/* =========================
+   Global Styles
+   ========================= */
+* {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    padding: 0 12px;
+}
+
+/* =========================
+   Header Styles
+   ========================= */
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3d405B;
+}
+
+/* =========================
+   Typography Styles
+   ========================= */
+h1,
+h2,
+h3 {
+    color: var(--accent);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* =========================
+   Button Styles
+   ========================= */
+button {
+    background-color: var(--button);
+    color: var(--text-primary);
+}
+
+.flat-button {
+    flex: 1;
+    /* Make each button take equal space */
+    margin: 0 5px;
+    /* Add horizontal margin for spacing */
+    background-color: transparent;
+    /* No background color */
+    border: 2px solid var(--text-primary);
+    /* Use button color for the border */
+    color: var(--text-primary);
+    /* Use button color for the text */
+    padding: 10px;
+    /* Padding for the button */
+    font-size: 16px;
+    /* Font size */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for hover effects */
+}
+
+.flat-button:hover {
+    background-color: var(--button);
+    /* Background color on hover */
+    color: var(--text-primary);
+    /* Text color on hover */
+}
+
+.flat-button:focus {
+    outline: none;
+    /* Remove outline on focus */
+}
+
+/* =========================
+   Navigation Styles
+   ========================= */
+nav {
+    display: none;
+    background-color: var(--background-muted);
+
+}
+
+nav.show {
+    display: block;
+}
+
+nav a {
+    color: var(--text-primary);
+    padding: 10px 12px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #3d405B;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+}
+
+/* =========================
+   About Photo Container Styles
+   ========================= */
+.about-photo-container {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.about-photo-container section {
+    background: var(--background-muted);
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.about-photo-container section h2 {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.about-photo-container section p {
+    background: none;
+    padding: 10px;
+}
+
+.about-photo-container img {
+    max-width: 100%;
+    height: auto;
+    padding: 25px;
+}
+
+/* =========================
+   Course Card Styles
+   ========================= */
+.course-card {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: var(--background-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h3 {
+    margin: 0;
+}
+
+.course-card p {
+    margin: 5px 0;
+}
+
+/* =========================
+   Course List Styles
+   ========================= */
+.course-list {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack items in a single column */
+    margin-top: 10px;
+}
+
+.course-card {
+    margin: 10px;
+    /* Margin around each card */
+    padding: 15px;
+    /* Padding inside each card */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: #f9f9f9;
+    /* Light background for cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: transform 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.courses h2 {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.course-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.total-credits {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--background-muted);
+    border-radius: 5px;
+    color: var(--text-primary);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    /* Stack the rows vertically */
+    align-items: center;
+    /* Center items horizontally */
+    padding: 20px;
+    /* Add some padding around the footer */
+    background-color: var(--background-light);
+    /* Optional: set a background color */
+    width: 100%;
+}
+
+.footer-top {
+    display: flex;
+    /* Use flexbox for the top section */
+    flex-direction: column;
+    /* Stack the social media and info vertically */
+    align-items: center;
+    /* Center items horizontally */
+    width: 100%;
+}
+
+.social-media {
+    display: flex;
+    /* Align icons in a row */
+    justify-content: center;
+    /* Center the icons */
+    margin-bottom: 10px;
+    /* Space between the social media and info */
+}
+
+.social-media a {
+    margin: 0 10px;
+    /* Adds space between the icons */
+    transition: transform 0.3s;
+    /* Adds a smooth transition effect */
+}
+
+.social-media img {
+    width: 40px;
+    /* Set a uniform width for the icons */
+    height: 40px;
+    /* Set a uniform height for the icons */
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    /* Slightly enlarges the icon on hover */
+}
+
+.footer-info {
+    text-align: center;
+    background-color: var(--background-muted);
+    /* Center the text in the footer info */
+    width: 100%;
+}
+
+#lastModified {
+    /* Add some space above */
+    text-align: center;
+    /* Center the last modified text */
+    background-color: var(--background-muted);
+    width: 100%;
+}

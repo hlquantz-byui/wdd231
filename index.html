@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="WDD231">
+    <meta name="description"
+        content="A class project by Hunter Quantz, this website demonstrates skills in web development and design, featuring coursework, projects, and educational insights.">
+    <meta name="author" content="Hunter Quantz">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>WDD 231 | Home</title>
+    <script src="scripts/getYear.js" defer></script>
+    <script src="scripts/getLastModified.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courseListArray.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="/images/web-svgrepo-com.svg" alt="Site logo" width="800" height="800">
+        <span>Hunter Quantz</span>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false"></button>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="chamber.html">Chamber Project</a>
+        <a href="final.html">Final Project</a>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <div class="about-photo-container">
+            <section>
+                <h2>About Me</h2>
+                <p>Hello! I'm an individual who enjoys the journey of self-discovery and personal growth. I have a deep
+                    appreciation for knowledge and often find myself immersed in books, exploring various subjects that
+                    pique my curiosity.</p>
+                <p>In my spare time, I enjoy engaging in creative pursuits, whether it's writing, drawing, or working on
+                    personal projects. I find joy in the process of learning new skills and exploring different forms of
+                    expression.</p>
+                <p>I value introspection and often take time to reflect on my experiences and ideas. I believe in the
+                    importance of finding balance and peace in everyday life, and I strive to cultivate a positive
+                    mindset.
+                </p>
+                <p>I look forward to sharing my thoughts and insights with others who appreciate a quieter, more
+                    contemplative approach to life.</p>
+            </section>
+            <section>
+                <h2>Student Photo</h2>
+                <img src="images/Hunter-and-wife.jpg" alt="Hunter and his wife">
+            </section>
+        </div>
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="course-buttons">
+                <button id="all-courses" class="flat-button">All Courses</button>
+                <button id="wdd-courses" class="flat-button">WDD Courses</button>
+                <button id="cse-courses" class="flat-button">CSE Courses</button>
+            </div>
+            <div id="course-container" class="course-list"></div>
+            <p class="total-credits">Total Credits: <span id="total-credits">0</span></p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="social-media">
+                <a href="https://github.com/hlquantz-byui" target="_blank">
+                    <img src="images/github-142-svgrepo-com.svg" alt="GitHub Icon">
+                </a>
+                <a href="https://www.linkedin.com/in/hunter-q/" target="_blank">
+                    <img src="images/linkedin-svgrepo-com.svg" alt="LinkedIn Icon">
+                </a>
+                <a href="mailto:hquantz@byupathway.edu">
+                    <img src="images/email-1-svgrepo-com.svg" alt="Email Icon">
+                </a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span></p>
+                <p>Hunter Quantz</p>
+                <p>United States of America</p>
+            </div>
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
