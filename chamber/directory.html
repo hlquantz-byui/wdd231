@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Chamber Directory">
+    <meta name="description"
+        content="This page provides a list of local business and other organizations that belong to the chamber of commerce.">
+    <meta name="author" content="Hunter Quantz">
+    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="WDD231 | Chamber Directory">
+    <meta property="og:description"
+        content="This page provides a list of local businesses and other organizations that belong to the chamber of commerce.">
+    <meta property="og:image" content="images/favicon.ico">
+    <meta property="og:url" content="https://hlquantz-byui.github.io/wdd231/chamber.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="../scripts/get-year.js" defer></script>
+    <script src="../scripts/get-last-modified.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+
+    <title>WDD231 | Chamber Directory</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <header>
+            <img src="images/ledger-svgrepo-com.svg" alt="Site logo" width="800" height="800">
+            <span>Timbuktu Chamber of Commerce</span>
+            <button id="ham-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false"></button>
+        </header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="#">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </div>
+    <main>
+        <h1>Timbuktu Chamber of Commerce Members</h1>
+        <div class="toggle-buttons">
+            <button id="gridViewBtn" class="toggle-button" aria-label="Grid View">
+                <img src="images/grid.svg" alt="Grid View">
+            </button>
+            <button id="listViewBtn" class="toggle-button" aria-label="List View">
+                <img src="images/list.svg" alt="List View">
+            </button>
+        </div>
+        <div id="members" class="list"></div>
+    </main>
+    <footer>
+        <div class="chamber-info">
+            <p><strong>Timbuktu Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(223) 555-2300</p>
+        </div>
+        <div class="social-media"> <a href="https://github.com/hlquantz-byui" target="_blank">
+                <img src="../images/github.svg" alt="GitHub Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/hunter-q/" target="_blank">
+                <img src="../images/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="mailto:hquantz@byupathway.edu">
+                <img src="../images/email.svg" alt="Email Icon">
+            </a>
+        </div>
+        <div class="student-info">
+            <p>WDD231 Class Project</p>
+            <p>Hunter Quantz</p>
+            <p>&copy;<span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

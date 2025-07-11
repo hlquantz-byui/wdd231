@@ -1,0 +1,285 @@
+/* =========================
+   CSS Variables
+   ========================= */
+:root {
+    --background-light: #E5EAFA;
+    --background-muted: #C6CCB2;
+    --text-primary: #093824;
+    --text-secondary: #C6CCB2;
+    --accent: #BF4E30;
+    --button: #78FECF;
+    --border-divider: #C6CCB2;
+}
+
+/* ==========================
+    Global Styles
+    ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-primary);
+}
+
+/* ===========================
+    Header Styles
+    ========================== */
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ddd;
+    background-color: var(--accent);
+    color: white;
+}
+
+
+header img {
+    max-width: 150px;
+    height: auto;
+    max-height: 50px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+header span {
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+
+/* ===========================
+    Navigation Styles
+    ========================== */
+
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--accent);
+    z-index: 1000;
+    text-align: center;
+    line-height: 40px;
+}
+
+nav.show {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    padding: 0 12px;
+    display: block;
+    transition: bakcground-color 0.3s;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* ==============================
+    Hamburger Menu Styles
+    ============================= */
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    /* Hamburger icon */
+    font-size: 2rem;
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+    /* Close icon */
+}
+
+/* =============================
+    Heading Styles
+    ============================ */
+
+h2 {
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+/* ==============================
+    Footer Styles
+    ============================= */
+
+footer {
+    text-align: left;
+    padding: 20px;
+    background-color: var(--accent);
+    color: white;
+    width: 100%;
+}
+
+/* ===============================
+    Social Media Styles
+    ============================== */
+
+.social-media {
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+/* ================================
+    Top Bar Styles
+    =============================== */
+
+.top-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--accent);
+    width: 100%;
+}
+
+.member {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid .member {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.member img {
+    max-width: 100px;
+    height: auto;
+}
+
+.toggle-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.toggle-button {
+    background-color: var(--background-muted);
+    /* optional: add color */
+    border: 2px solid transparent;
+    border-radius: 6px;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    border-color: var(--accent);
+    /* optional hover effect */
+}
+
+.toggle-button img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.toggle-button.active {
+    background-color: var(--accent);
+    /* Highlight background */
+    border-color: var(--text-primary);
+    /* Optional visible border */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Optional shadow for emphasis */
+}
+
+.toggle-button.active img {
+    filter: brightness(0) invert(1);
+    /* Makes icons white for contrast */
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list .member {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Just 4 columns now */
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    width: 100%;
+    background-color: white;
+}
+
+.list .member:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Special style for the header row */
+.list-header {
+    font-weight: bold;
+    background-color: var(--background-muted);
+}
+
+.list .member:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Ensure image looks better in cards */
+.grid .member img,
+.list .member img {
+    margin: 0 auto 10px auto;
+    border-radius: 4px;
+}
+
+#members {
+    transition: all 0.3s ease-in-out;
+}

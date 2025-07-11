@@ -1,0 +1,109 @@
+@media only screen and (min-width: 38rem) {
+
+    header,
+    main,
+    nav,
+    footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    header {
+        display: flex;
+        align-items: flex-start;
+        padding: 10px;
+        border-bottom: 0;
+    }
+
+    header img {
+        margin-right: 10px;
+        width: 50px;
+        height: auto;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav a {
+        margin-left: 15px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .top-bar {
+        flex-direction: row;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* ======================
+        Grid View
+        ===================== */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+    }
+
+    .grid .member {
+        flex: 1 1 calc(33.33% - 20px);
+        margin: 10px;
+        height: auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* =======================
+        List View
+        ====================== */
+
+    .list {
+        display: block;
+    }
+
+    .list .member {
+        width: 100%;
+        margin: 10px 0;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        background-color: #f9f9f9;
+    }
+
+    .list .member:nth-child(even) {
+        background-color: #e9e9e9;
+    }
+
+    .list .member img {
+        width: 80px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .list .member div {
+        flex: 1;
+    }
+}
