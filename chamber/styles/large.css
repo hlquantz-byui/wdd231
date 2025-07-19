@@ -1,5 +1,8 @@
 @media only screen and (min-width: 38rem) {
 
+    /* ==========================
+        Layout Styles
+        ========================== */
     header,
     main,
     nav,
@@ -105,5 +108,154 @@
 
     .list .member div {
         flex: 1;
+    }
+
+    /* ==========================
+        Three Column Layout
+        ========================== */
+
+    .three-column-layout {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    /* ==========================
+        Call to Action Styles
+        ========================== */
+
+    .call-to-action,
+    .current-events,
+    .weather {
+        background-color: var(--background-muted);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ==========================
+        Carousel Styles
+        ========================== */
+
+    .carousel {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        align-items: stretch;
+    }
+
+    .event-card {
+        min-width: 300px;
+        margin-right: 10px;
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .event-card.active {
+        display: block;
+    }
+
+    .carousel-button {
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 0 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s;
+        user-select: none;
+    }
+
+    .carousel-button:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .carousel-button.prev {
+        left: 10px;
+    }
+
+    .carousel-button.next {
+        right: 10px;
+    }
+
+    /* ==========================
+        Hero Section Styles
+        ========================== */
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        min-width: 300px;
+        max-width: 500px;
+        height: auto;
+        transform: translate(-50%, -50%);
+        display: block;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+
+    }
+
+    .hero-text p {
+        font-size: 1.5rem;
+
+    }
+
+    /* ==========================
+        Company Spotlights Styles
+        ========================== */
+
+    .company-spotlights {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: stretch;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .spotlight {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .spotlight {
+        flex: 1;
+        margin: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .spotlight:first-child {
+        margin-left: 0;
+    }
+
+    .spotlight:last-child {
+        margin-right: 0;
+    }
+
+    .spotlight {
+        min-width: 250px;
     }
 }

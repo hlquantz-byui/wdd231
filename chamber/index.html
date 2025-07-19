@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="../scripts/get-year.js" defer></script>
+    <script src="../scripts/get-last-modified.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/get-weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+    <meta name="description"
+        content="Welcome to the Timbuktu Chamber of Commerce. Discover local businesses, events, and resources to support our community.">
+    <meta name="author" content="Hunter Quantz">
+    <meta name="title" content="Chamber Home">
+    <meta property="og:title" content="Timbuktu Chamber of Commerce | Home">
+    <meta property="og:description"
+        content="Welcome to the Timbuktu Chamber of Commerce. Discover local businesses, events, and resources to support our community.">
+    <meta property="og:url" content="https://hlquantz-byui.github.io/wdd231/index.html">
+    <title>WDD231 | Chamber Home</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <header>
+            <img src="images/ledger-svgrepo-com.svg" alt="Site logo" width="800" height="800">
+            <span>Timbuktu Chamber of Commerce</span>
+            <button id="ham-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false"></button>
+        </header>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Image -->
+        <section class="hero">
+            <img src="images/hero-image.webp" alt="Hero Image Description" class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to the Timbuktu Chamber of Commerce</h1>
+                <p>Your gateway to local businesses and community events.</p>
+            </div>
+        </section>
+        <div class="three-column-layout">
+            <!-- Current Events Section -->
+            <section class="current-events">
+                <h2>Current Events</h2>
+                <div class="carousel">
+                    <div class="event-card">Community Clean-Up Day - March 15, 2025</div>
+                    <div class="event-card">Local Farmers Market - March 20, 2025</div>
+                    <div class="event-card">Annual Chamber Gala - April 5, 2025</div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-button prev" onclick="prevCard()">&lt;</button>
+                    <button class="carousel-button next" onclick="nextCard()">&gt;</button>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="call-to-action">
+                <h2>Join the Chamber of Commerce</h2>
+                <p>Become a member today and connect with local businesses!</p>
+                <a href="join.html" class="cta-button">Join Now</a>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather" id="weather-section">
+                <p id="weather-info">Loading weather data...</p>
+                <div id="forecast"></div>
+            </section>
+        </div>
+        <!-- Company Spotlights Section -->
+        <section class="company-spotlights">
+            <h2>Company Spotlights</h2>
+            <div class="spotlight">
+                <h3>Company Name 1</h3>
+                <p>Brief description of Company 1.</p>
+            </div>
+            <div class="spotlight">
+                <h3>Company Name 2</h3>
+                <p>Brief description of Company 2.</p>
+            </div>
+            <div class="spotlight">
+                <h3>Company Name 3</h3>
+                <p>Brief description of Company 3.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="chamber-info">
+            <p><strong>Timbuktu Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(223) 555-2300</p>
+        </div>
+        <div class="social-media">
+            <a href="https://github.com/hlquantz-byui" target="_blank">
+                <img src="../images/github.svg" alt="GitHub Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/hunter-q/" target="_blank">
+                <img src="../images/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="mailto:hquantz@byupathway.edu">
+                <img src="../images/email.svg" alt="Email Icon">
+            </a>
+        </div>
+        <div class="student-info">
+            <p>WDD231 Class Project</p>
+            <p>Hunter Quantz</p>
+            <p>&copy;<span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
