@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="../scripts/get-year.js" defer></script>
+    <script src="../scripts/get-last-modified.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/timestamp.js" defer></script>
+    <script src="scripts/modals.js" defer></script>
+    <meta name="description"
+        content="Join the Timbuktu Chamber of Commerce to connect with local businesses and enhance your community involvement.">
+    <meta name="author" content="Hunter Quantz">
+    <meta name="title" content="Join the Chamber">
+    <meta property="og:title" content="Timbuktu Chamber of Commerce | Join Us">
+    <meta property="og:image" content="images/ledger-svgrepo-com.svg">
+    <meta property="og:description"
+        content="Join the Timbuktu Chamber of Commerce to connect with local businesses and enhance your community involvement.">
+    <meta property="og:url" content="https://hlquantz-byui.github.io/wdd231/chamber/join.html">
+    <title>WDD231 | Join the Chamber</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <header>
+            <img src="images/ledger-svgrepo-com.svg" alt="Site logo" width="800" height="800">
+            <span>Timbuktu Chamber of Commerce</span>
+            <button id="ham-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false"></button>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" class="active">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="form-and-cards-layout">
+            <section class="form-section">
+                <h2>Membership Application Form</h2>
+                <form action="thankyou.html" method="get">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" name="first-name" id="first-name" required title="Please enter your first name"
+                        autocomplete="given-name">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" name="last-name" id="last-name" required title="Please enter your last name"
+                        autocomplete="family-name">
+                    <label for="organizational-title">Organizational Title:</label>
+                    <input type="text" name="organizational-title" id="organizational-title" required
+                        title="Please enter your organizational title" autocomplete="organization-title"
+                        pattern="^[A-Za-z\s-]{7,}$">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required title="Please enter your email address"
+                        autocomplete="email" placeholder="you@example.com">
+                    <label for="mobile-phone-number">Mobile Phone Number:</label>
+                    <input type="tel" name="mobile-phone-number" id="mobile-phone-number" required
+                        title="Please enter your mobile phone Number" autocomplete="mobile">
+                    <label for="organization-name">Organization Name</label>
+                    <input type="text" name="organization-name" id="organization-name" required
+                        title="Please enter your ogranization's name" autocomplete="organization">
+                    <span class="membership-level">Membership Level:</span>
+                    <div class="membership-options" id="membership-level">
+                        <div class="membership-option">
+                            <input type="radio" id="np" name="membership" value="NP" required>
+                            <label for="np">NP Membership (No Fee)</label>
+                        </div>
+                        <div class="membership-option">
+                            <input type="radio" id="bronze" name="membership" value="Bronze">
+                            <label for="bronze">Bronze Membership</label>
+                        </div>
+                        <div class="membership-option">
+                            <input type="radio" id="silver" name="membership" value="Silver">
+                            <label for="silver">Silver Membership</label>
+                        </div>
+                        <div class="membership-option">
+                            <input type="radio" id="gold" name="membership" value="Gold">
+                            <label for="gold">Gold Membership</label>
+                        </div>
+                    </div>
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    <input type="submit" value="Submit Form" aria-label="Submit Form" class="submit-button">
+                </form>
+            </section>
+            <section class="card-section">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards">
+                    <div class="card" id="np-card">
+                        <h3>NP Membership</h3>
+                        <a href="#np-modal" class="modal-link" id="np-modal-link"
+                            onclick="openModal('np-modal', 'np-modal-link')">Learn
+                            More</a>
+                    </div>
+                    <div class="card" id="bronze-card">
+                        <h3>Bronze Membership</h3>
+                        <a href="#bronze-modal" class="modal-link" id="bronze-modal-link"
+                            onclick="openModal('bronze-modal', 'bronze-modal-link')">Learn More</a>
+                    </div>
+                    <div class="card" id="silver-card">
+                        <h3>Silver Membership</h3>
+                        <a href="#silver-modal" class="modal-link" id="silver-modal-link"
+                            onclick="openModal('silver-modal', 'silver-modal-link')">Learn More</a>
+                    </div>
+                    <div class="card" id="gold-card">
+                        <h3>Gold Membership</h3>
+                        <a href="#gold-modal" class="modal-link" id="gold-modal-link"
+                            onclick="openModal('gold-modal', 'gold-modal-link')">Learn More</a>
+                    </div>
+                </div>
+                <div id="np-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="np-modal-title"
+                    tabindex="-1">
+                    <div class="modal-content">
+                        <button class="close" onclick="closeModal('np-modal')">&times;</button>
+                        <h2 id="np-modal-title">NP Membership Benefits</h2>
+                        <p>As a Non-Profit Membership, you receive:</p>
+                        <ul>
+                            <li>Access to community resources and support.</li>
+                            <li>Participation in special non-profit events.</li>
+                            <li>Networking opportunities with other non-profits.</li>
+                            <li>Free advertising on our website's non-profit section.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="bronze-modal" class="modal" aria-hidden="true" role="dialog"
+                    aria-labelledby="bronze-modal-title" tabindex="-1">
+                    <div class="modal-content">
+                        <button class="close" onclick="closeModal('bronze-modal')"
+                            aria-label="Close modal">&times;</button>
+                        <h2 id="bronze-modal-title">Bronze Membership Benefits</h2>
+                        <p>As a Bronze Member, you enjoy:</p>
+                        <ul>
+                            <li>All NP Membership benefits.</li>
+                            <li>10% discount on events and workshops.</li>
+                            <li>Access to exclusive training sessions.</li>
+                            <li>Spotlight feature on our homepage for one month.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="silver-modal" class="modal" aria-hidden="true" role="dialog"
+                    aria-labelledby="silver-modal-title" tabindex="-1">
+                    <div class="modal-content">
+                        <button class="close" onclick="closeModal('silver-modal')">&times;</button>
+                        <h2 id="silver-modal-title">Silver Membership Benefits</h2>
+                        <p>As a Silver Member, you receive:</p>
+                        <ul>
+                            <li>All Bronze Membership benefits.</li>
+                            <li>15% discount on events and workshops.</li>
+                            <li>Priority access to special events.</li>
+                            <li>Featured article in our monthly newsletter.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="gold-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="gold-modal-title">
+                    <div class="modal-content" tabindex="-1">
+                        <button class="close" onclick="closeModal('gold-modal')">&times;</button>
+                        <h2 id="gold-modal-title">Gold Membership Benefits</h2>
+                        <p>As a Gold Member, you enjoy:</p>
+                        <ul>
+                            <li>All Silver Membership benefits.</li>
+                            <li>20% discount on events and workshops.</li>
+                            <li>Exclusive invitations to VIP events.</li>
+                            <li>Personalized advertising options on our website.</li>
+                            <li>One-on-one consultation sessions with our experts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="chamber-info">
+            <p><strong>Timbuktu Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(223) 555-2300</p>
+        </div>
+        <div class="social-media">
+            <a href="https://github.com/hlquantz-byui" target="_blank">
+                <img src="../images/github.svg" alt="GitHub Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/hunter-q/" target="_blank">
+                <img src="../images/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="mailto:hquantz@byupathway.edu">
+                <img src="../images/email.svg" alt="Email Icon">
+            </a>
+        </div>
+        <div class="student-info">
+            <p>WDD231 Class Project</p>
+            <p>Hunter Quantz</p>
+            <p>&copy;<span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

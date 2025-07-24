@@ -1,12 +1,12 @@
 /* =========================
-   CSS Variables
-   ========================= */
+CSS Variables
+========================= */
 :root {
     --background-light: #E5EAFA;
     --background-muted: #C6CCB2;
     --text-primary: #093824;
     --text-secondary: #C6CCB2;
-    --accent: #BF4E30;
+    --accent: #76311E;
     --button: #78FECF;
     --border-divider: #C6CCB2;
 }
@@ -81,7 +81,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #BF2E30;
+    background-color: #800000;
     color: #fff;
     text-decoration: underline;
 }
@@ -491,4 +491,381 @@ footer {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+}
+
+/* ===============================
+    Membership Cards Styles
+    =================================*/
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--background-muted);
+    border-radius: 5px 20px 5px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.5s, opacity 0.5s;
+    opacity: 0;
+    min-width: 400px;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+/* ===========================
+    Modal Styles
+    ========================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .modal.show {
+    display: block;
+} */
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.modal-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-link:hover {
+    background-color: #800000;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-link:active {
+    transform: translateY(0);
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ==========================
+    Form
+    ==========================*/
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-divider);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+form button[type="submit"] {
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #800000;
+}
+
+.form-section h2 {
+    text-align: center;
+}
+
+.card-section h2 {
+    text-align: center;
+}
+
+.membership-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.membership-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.membership-option input[type="radio"] {
+    margin: 0;
+}
+
+.membership-option label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.membership-option input[type="radio"] {
+    vertical-align: middle;
+    position: relative;
+    top: 2px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 400px;
+    position: relative;
+    animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.modal-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--accent);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.modal-content .close:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 400px;
+    position: relative;
+    animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.modal-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--accent);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.modal-content .close:hover {
+    transform: scale(1.2);
+}
+
+.membership-level {
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+
+input[type=submit] {
+    background-color: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+
+input[type=submit]:hover {
+    background-color: #800000;
+    transform: scale(1.05);
+}
+
+.info {
+    background-color: var(--light);
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark);
+    font-size: 20px;
+}
+
+.info p {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+.info div {
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+.info strong {
+    color: var(--primary);
+    display: inline-block;
 }

@@ -258,4 +258,21 @@
     .spotlight {
         min-width: 250px;
     }
+
+    /* ==============================
+        Form and cards layout
+    ==============================*/
+
+    .form-and-cards-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .modal-content {
+        max-width: 600px;
+        padding: 2.5rem;
+    }
 }
