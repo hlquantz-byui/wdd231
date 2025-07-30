@@ -869,3 +869,7 @@ input[type=submit]:hover {
     color: var(--primary);
     display: inline-block;
 }
+
+.form-section h1 {
+    font-size: large;
+}
