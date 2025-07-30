@@ -1,0 +1,33 @@
+@media only screen and (min-width: 38rem) {
+    /* Add desktop-specific styles here */
+
+    body {
+        padding: 0 24px;
+        /* Increased padding for larger screens */
+    }
+
+    header {
+        grid-template-columns: 48px auto 64px;
+        /* Adjust header layout for larger screens */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        /* Larger heading size */
+    }
+
+    h2 {
+        font-size: 2rem;
+        /* Larger subheading size */
+    }
+
+    button {
+        padding: 12px 20px;
+        /* Larger button size */
+    }
+
+    .wireframes img {
+        max-width: 100%;
+        /* Ensure images are responsive */
+    }
+}

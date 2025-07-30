@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Recipe Haven is a welcoming platform for cooking enthusiasts to explore, share, and enjoy a diverse collection of recipes.">
+    <meta name="author" content="Hunter Quantz">
+    <meta property="og:title" content="Recipe Haven">
+    <meta property="og:description"
+        content="Discover a variety of recipes, filter by difficulty and cuisine, and share your own culinary creations.">
+    <script src="../scripts/get-year.js" defer></script>
+    <script src="../scripts/get-last-modified.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <!-- <link rel="stylesheet" href="styles/large.css"> -->
+    <title>Recipe Collection Website Plan</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Recipe Haven</h1>
+        <p>This name was selected because it conveys a welcoming space for cooking enthusiasts to discover, share, and
+            enjoy a variety of recipes. The term "Haven" suggests a safe and comforting place, aligning with the idea of
+            home-cooked meals.</p>
+        <p class="accent">Optional domain availability: recipehaven.com (check for availability)</p>
+
+        <h2>Site Purpose</h2>
+        <p>Recipe Haven serves as a comprehensive platform for food lovers to explore a diverse collection of recipes.
+            The site will allow users to browse, filter, and add their own recipes, providing a community-driven
+            experience. It will also feature user preferences for light or dark mode, enhancing usability.</p>
+
+        <h2>Scenarios</h2>
+        <h3>1. What types of recipes can I find on Recipe Haven?</h3>
+        <p>This question addresses users looking for specific cuisines or difficulty levels in cooking.</p>
+        <h3>2. How can I submit my own recipe to the site?</h3>
+        <p>This scenario helps guide users interested in contributing their culinary creations to the collection.</p>
+
+        <h2>Color Schema</h2>
+        <p>Usage:</p>
+        <ul>
+            <li><strong>Background (#34403a):</strong> <code>--color-background</code> for the overall site background.
+            </li>
+            <li><strong>Primary Text (#ffffff):</strong> <code>--color-text-primary</code> for main content and body
+                text.
+            </li>
+            <li><strong>Secondary Text (#285238):</strong> <code>--color-text-secondary</code> for secondary information
+                or less
+                prominent text.</li>
+            <li><strong>Accents (#04e824):</strong> <code>--color-accent</code> for buttons and interactive elements.
+            </li>
+            <li><strong>Highlights (#18ff6d):</strong> <code>--color-highlight</code> for important highlights or
+                notifications.
+            </li>
+            <li><strong>Headings (#1dd755):</strong> <code>--color-heading</code> for headings and subheadings to create
+                a
+                cohesive look.</li>
+        </ul>
+
+        <h2>Typography</h2>
+        <ul>
+            <li><strong>Font 1:</strong> Merriweather (Serif) - Headings and subheadings.</li>
+            <li><strong>Font 2:</strong> Source Code Pro (Monospaced) - Code snippets and any technical instructions.
+            </li>
+            <li><strong>Font 3:</strong> Open Sans (Sans-serif)
+                Usage: Body text. While it’s a sans-serif font, it complements the other two by ensuring readability and
+                a friendly tone throughout the site.</li>
+        </ul>
+        <h2>Wireframes</h2>
+        <div class="wireframes">
+            <img src="images/wireframe.webp" alt="desktop wireframe" style="width: 50%;">
+            <img src="images/wireframe-mobile.webp" alt="mobile wireframe" style="width: 50%;">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="social-media">
+                <a href="https://github.com/hlquantz-byui" target="_blank">
+                    <img src="../images/github.svg" alt="GitHub Icon">
+                </a>
+                <a href="https://www.linkedin.com/in/hunter-q/" target="_blank">
+                    <img src="../images/linkedin.svg" alt="LinkedIn Icon">
+                </a>
+                <a href="mailto:hquantz@byupathway.edu">
+                    <img src="../images/email.svg" alt="Email Icon">
+                </a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span></p>
+                <p>Hunter Quantz</p>
+                <p>United States of America</p>
+            </div>
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
