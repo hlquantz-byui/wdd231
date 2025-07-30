@@ -7,11 +7,13 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" as="style"
+        onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap">
+    </noscript>
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/large.css" media="print" onload="this.media='all'">
     <script src="../scripts/get-year.js" defer></script>
     <script src="../scripts/get-last-modified.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
@@ -48,7 +50,7 @@
     <main>
         <!-- Hero Image -->
         <section class="hero">
-            <img src="images/hero-image.webp" alt="Hero Image Description" class="hero-image">
+            <img src="images/hero-image.webp" alt="Hero Image Description" class="hero-image" fetchpriority="high">
             <div class="hero-text">
                 <h1>Welcome to the Timbuktu Chamber of Commerce</h1>
                 <p>Your gateway to local businesses and community events.</p>

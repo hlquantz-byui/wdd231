@@ -1,6 +1,3 @@
-/* =========================
-CSS Variables
-========================= */
 :root {
     --background-light: #E5EAFA;
     --background-muted: #C6CCB2;
@@ -8,53 +5,41 @@ CSS Variables
     --text-secondary: #C6CCB2;
     --accent: #76311E;
     --button: #78FECF;
-    --border-divider: #C6CCB2;
+    --border-divider: #C6CCB2
 }
 
-/* ==========================
-    Global Styles
-    ========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lora', serif;
+    font-family: "Josefin Sans", sans-serif
 }
 
 body {
     background-color: var(--background-light);
-    color: var(--text-primary);
+    color: var(--text-primary)
 }
-
-/* ===========================
-    Header Styles
-    ========================== */
 
 header {
     display: flex;
     justify-content: flex-start;
     border-bottom: 1px solid #ddd;
     background-color: var(--accent);
-    color: white;
+    color: #fff
 }
-
 
 header img {
     max-width: 150px;
     height: auto;
     max-height: 50px;
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 10px
 }
 
 header span {
     font-size: 1.2rem;
-    line-height: 40px;
+    line-height: 40px
 }
-
-/* ===========================
-    Navigation Styles
-    ========================== */
 
 nav {
     display: none;
@@ -63,114 +48,91 @@ nav {
     background-color: var(--accent);
     z-index: 1000;
     text-align: center;
-    line-height: 40px;
+    line-height: 40px
 }
 
 nav.show {
-    display: flex;
+    display: flex
 }
 
 nav a {
-    color: white;
+    color: #fff;
     padding: 0 12px;
     display: block;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color .3s, color .3s;
     text-decoration: none;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 nav a:hover {
-    background-color: #800000;
+    background-color: maroon;
     color: #fff;
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 nav a.active {
-    font-weight: bold;
+    font-weight: 700;
     background-color: var(--accent);
     color: #fff;
-    text-decoration: underline;
+    text-decoration: underline
 }
 
-/* ==============================
-    Hamburger Menu Styles
-    ============================= */
-
 .hamburger {
-    background: none;
+    background: 0 0;
     border: none;
     color: #fff;
     cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hamburger::before {
     content: "\2630";
-    /* Hamburger icon */
-    font-size: 2rem;
+    font-size: 2rem
 }
 
 .hamburger.show::before {
-    content: "\00d7";
-    /* Close icon */
+    content: "\00d7"
 }
-
-/* =============================
-    Heading Styles
-    ============================ */
 
 h2 {
     margin-bottom: 15px;
-    color: var(--text-primary);
+    color: var(--text-primary)
 }
-
-/* ==============================
-    Footer Styles
-    ============================= */
 
 footer {
     text-align: left;
     padding: 20px;
     background-color: var(--accent);
-    color: white;
-    width: 100%;
+    color: #fff;
+    width: 100%
 }
-
-/* ===============================
-    Social Media Styles
-    ============================== */
 
 .social-media {
     display: flex;
     justify-content: left;
-    padding: 10px;
+    padding: 10px
 }
 
 .social-media a {
     margin: 0 10px;
-    transition: transform 0.3s;
+    transition: transform .3s
 }
 
 .social-media img {
     width: 40px;
-    height: 40px;
+    height: 40px
 }
 
 .social-media img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
-
-/* ================================
-    Top Bar Styles
-    =============================== */
 
 .top-bar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--accent);
-    width: 100%;
+    width: 100%
 }
 
 .member {
@@ -179,39 +141,38 @@ footer {
     margin: 10px;
     border-radius: 5px;
     width: 100%;
-    transition: transform 0.2s;
+    transition: transform .2s
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center
 }
 
 .grid .member {
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
     max-width: 300px;
     text-align: center;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 8px
 }
 
 .member img {
     max-width: 100px;
-    height: auto;
+    height: auto
 }
 
 .toggle-buttons {
     display: flex;
     gap: 1rem;
     margin: 1rem 0;
-    justify-content: center;
+    justify-content: center
 }
 
 .toggle-button {
     background-color: var(--background-muted);
-    /* optional: add color */
     border: 2px solid transparent;
     border-radius: 6px;
     width: 48px;
@@ -221,99 +182,80 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: border-color 0.3s ease;
+    transition: border-color .3s ease
 }
 
 .toggle-button:hover {
-    border-color: var(--accent);
-    /* optional hover effect */
+    border-color: var(--accent)
 }
 
 .toggle-button img {
     width: 60%;
     height: 60%;
-    object-fit: contain;
+    object-fit: contain
 }
 
 .toggle-button.active {
     background-color: var(--accent);
-    /* Highlight background */
     border-color: var(--text-primary);
-    /* Optional visible border */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    /* Optional shadow for emphasis */
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2)
 }
 
 .toggle-button.active img {
-    filter: brightness(0) invert(1);
-    /* Makes icons white for contrast */
+    filter: brightness(0) invert(1)
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center
 }
 
 .list .member {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Just 4 columns now */
     gap: 1rem;
     padding: 1rem;
     border-bottom: 1px solid #ccc;
     text-align: left;
     width: 100%;
-    background-color: white;
+    background-color: #fff
 }
 
 .list .member:nth-child(even) {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0
 }
 
-/* Special style for the header row */
 .list-header {
-    font-weight: bold;
-    background-color: var(--background-muted);
+    font-weight: 700;
+    background-color: var(--background-muted)
 }
 
 .list .member:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: #fff
 }
 
-/* Ensure image looks better in cards */
 .grid .member img,
 .list .member img {
     margin: 0 auto 10px auto;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 #members {
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out
 }
-
-/* ===========================
-    Hero Section Styles
-    ========================== */
 
 .hero {
     position: relative;
-    /* Position relative for absolute positioning of text */
     max-width: 900px;
-    /* Set the maximum width */
     margin: 0 auto;
-    /* Center the hero section */
-    overflow: hidden;
-    /* Hide any overflow */
+    overflow: hidden
 }
 
 .hero-image {
     width: 100%;
-    /* Make the image responsive */
     height: auto;
-    /* Maintain aspect ratio */
-    display: block;
-    /* Remove bottom space under the image */
+    display: block
 }
 
 .hero-text {
@@ -327,50 +269,41 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 0 10vw;
-    /* Add horizontal padding for readability */
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0;
-    /* Remove rounded corners for full coverage */
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 0
 }
 
 .hero-text h1 {
     font-size: 6vw;
-    /* Adjust font size for the heading */
-    margin-bottom: 10px;
-    /* Space below the heading */
+    margin-bottom: 10px
 }
 
 .hero-text p {
-    font-size: 4vw;
-    /* Adjust font size for the paragraph */
+    font-size: 4vw
 }
-
-/* ===========================
-    Call to Action Button Styles
-    ========================== */
 
 .cta-button {
     background-color: var(--accent);
-    color: white;
+    color: #fff;
     border: none;
     padding: 15px 20px;
     border-radius: 5px;
     font-size: 1rem;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color .3s, transform .2s
 }
 
 .cta-button:hover {
-    background-color: #BF2E30;
-    transform: translateY(-2px);
+    background-color: #bf2e30;
+    transform: translateY(-2px)
 }
 
 .cta-button:active {
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
 .call-to-action {
@@ -381,45 +314,37 @@ footer {
     padding: 20px;
     background-color: var(--background-muted);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
 }
-
-/* ===========================
-    Weather Card Styles
-    ========================== */
 
 .weather-card {
     background-color: var(--background-muted);
     padding: 20px;
     border-radius: 8px;
-    text-align: center;
+    text-align: center
 }
 
 .weather-card h3 {
     margin-bottom: 10px;
-    color: var(--text-primary);
+    color: var(--text-primary)
 }
 
 .weather-card .temperature {
     font-size: 2rem;
-    font-weight: bold;
-    color: var(--accent);
+    font-weight: 700;
+    color: var(--accent)
 }
 
 .weather-card .description {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 10px 0
 }
 
 .weather-card .humidity,
 .weather-card .wind-speed {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary)
 }
-
-/* ==============================
-    Company Spotlights Styles
-    ============================== */
 
 .company-spotlights {
     display: flex;
@@ -430,7 +355,7 @@ footer {
     gap: 20px;
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 20px
 }
 
 .spotlight {
@@ -439,97 +364,83 @@ footer {
     margin: 10px auto;
     background: var(--background-muted);
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
     padding: 20px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: center
 }
 
 .member-logo {
     max-width: 100px;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .company-spotlights {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around
 }
-
-/* ==============================
-    Carousel Styles
-    ============================== */
 
 .carousel {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     overflow: visible;
-    padding: 1rem 0;
+    padding: 1rem 0
 }
 
 .event-card {
     display: block;
-    background-color: white;
+    background-color: #fff;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    text-align: center
 }
 
 .carousel-controls {
-    display: none;
+    display: none
 }
-
-/* ==============================
-    Three Column Layout Styles
-    ============================== */
 
 .three-column-layout {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem
 }
 
-/* ===============================
-    Membership Cards Styles
-    =================================*/
 .membership-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
     flex-direction: column;
-    align-items: center;
+    align-items: center
 }
 
 .card {
     background-color: var(--background-muted);
     border-radius: 5px 20px 5px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     padding: 20px;
     margin: 10px;
     text-align: center;
-    transition: transform 0.3s, background-color 0.5s, opacity 0.5s;
+    transition: transform .3s, background-color .5s, opacity .5s;
     opacity: 0;
-    min-width: 400px;
+    min-width: 400px
 }
 
 .card.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
 .card:hover {
     background-color: var(--accent);
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
-/* ===========================
-    Modal Styles
-    ========================== */
 .modal {
     display: none;
     position: fixed;
@@ -539,139 +450,131 @@ footer {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5)
 }
 
-/* .modal.show {
-    display: block;
-} */
-
 .modal-content {
-    background-color: white;
+    background-color: #fff;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px;
+    max-width: 500px
 }
 
 .modal-link {
     display: inline-block;
     padding: 10px 15px;
     background-color: var(--accent);
-    color: white;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color .3s, transform .2s
 }
 
 .modal-link:hover {
-    background-color: #800000;
+    background-color: maroon;
     transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3)
 }
 
 .modal-link:active {
-    transform: translateY(0);
+    transform: translateY(0)
 }
-
 
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700
 }
 
-.close:hover,
-.close:focus {
-    color: black;
+.close:focus,
+.close:hover {
+    color: #000;
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer
 }
 
-/* ==========================
-    Form
-    ==========================*/
 form {
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
     margin: 20px auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1)
 }
 
 form label {
     display: block;
     margin: 15px 0 5px;
-    font-weight: bold;
-    color: var(--text-primary);
+    font-weight: 700;
+    color: var(--text-primary)
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form textarea,
-form select {
+form input[type=email],
+form input[type=tel],
+form input[type=text],
+form select,
+form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--border-divider);
     border-radius: 5px;
     font-size: 1rem;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9
 }
 
-form button[type="submit"] {
+form button[type=submit] {
     background-color: var(--accent);
-    color: white;
+    color: #fff;
     padding: 12px 20px;
     margin-top: 20px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color .3s
 }
 
-form button[type="submit"]:hover {
-    background-color: #800000;
+form button[type=submit]:hover {
+    background-color: maroon
 }
 
 .form-section h2 {
-    text-align: center;
+    text-align: center
 }
 
 .card-section h2 {
-    text-align: center;
+    text-align: center
 }
 
 .membership-options {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .membership-option {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px
 }
 
-.membership-option input[type="radio"] {
-    margin: 0;
+.membership-option input[type=radio] {
+    margin: 0
 }
 
 .membership-option label:hover {
     text-decoration: underline;
-    cursor: pointer;
+    cursor: pointer
 }
 
-.membership-option input[type="radio"] {
+.membership-option input[type=radio] {
     vertical-align: middle;
     position: relative;
-    top: 2px;
+    top: 2px
 }
 
 .modal {
@@ -680,16 +583,15 @@ form button[type="submit"]:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* semi-transparent background */
+    background-color: rgba(0, 0, 0, .5);
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000
 }
 
 .modal.show {
-    display: flex;
+    display: flex
 }
 
 .modal-content {
@@ -697,51 +599,51 @@ form button[type="submit"]:hover {
     color: var(--dark);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
     max-width: 90%;
     width: 400px;
     position: relative;
-    animation: fadeInModal 0.3s ease-out;
+    animation: fadeInModal .3s ease-out
 }
 
 @keyframes fadeInModal {
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: scale(.95)
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1)
     }
 }
 
 .modal-content h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: var(--primary)
 }
 
 .modal-content p {
     font-size: 1rem;
     margin-bottom: 1rem;
-    line-height: 1.4;
+    line-height: 1.4
 }
 
 .modal-content .close {
     position: absolute;
-    top: 0.5rem;
-    right: 0.75rem;
-    background: none;
+    top: .5rem;
+    right: .75rem;
+    background: 0 0;
     border: none;
     font-size: 1.5rem;
     color: var(--accent);
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform .2s ease
 }
 
 .modal-content .close:hover {
-    transform: scale(1.2);
+    transform: scale(1.2)
 }
 
 .modal {
@@ -750,16 +652,15 @@ form button[type="submit"]:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* semi-transparent background */
+    background-color: rgba(0, 0, 0, .5);
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000
 }
 
 .modal.show {
-    display: flex;
+    display: flex
 }
 
 .modal-content {
@@ -767,59 +668,59 @@ form button[type="submit"]:hover {
     color: var(--text-primary);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
     max-width: 90%;
     width: 400px;
     position: relative;
-    animation: fadeInModal 0.3s ease-out;
+    animation: fadeInModal .3s ease-out
 }
 
 @keyframes fadeInModal {
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: scale(.95)
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1)
     }
 }
 
 .modal-content h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: var(--primary)
 }
 
 .modal-content p {
     font-size: 1rem;
     margin-bottom: 1rem;
-    line-height: 1.4;
+    line-height: 1.4
 }
 
 .modal-content .close {
     position: absolute;
-    top: 0.5rem;
-    right: 0.75rem;
-    background: none;
+    top: .5rem;
+    right: .75rem;
+    background: 0 0;
     border: none;
     font-size: 1.5rem;
     color: var(--accent);
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform .2s ease
 }
 
 .modal-content .close:hover {
-    transform: scale(1.2);
+    transform: scale(1.2)
 }
 
 .membership-level {
     font-size: 1em;
-    font-weight: bold;
+    font-weight: 700;
     display: block;
     margin-bottom: 10px;
-    padding-top: 20px;
+    padding-top: 20px
 }
 
 input[type=submit] {
@@ -830,46 +731,46 @@ input[type=submit] {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color .3s, transform .3s;
     display: block;
-    margin: 20px auto;
+    margin: 20px auto
 }
 
 input[type=submit]:hover {
-    background-color: #800000;
-    transform: scale(1.05);
+    background-color: maroon;
+    transform: scale(1.05)
 }
 
 .info {
     background-color: var(--light);
     border-radius: 1rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .15);
     padding: 2rem;
     margin: 2rem auto;
     max-width: 600px;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--dark);
-    font-size: 20px;
+    font-size: 20px
 }
 
 .info p {
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--accent);
-    padding-bottom: 0.5rem;
+    padding-bottom: .5rem
 }
 
 .info div {
     margin-bottom: 1rem;
     border-bottom: 1px dashed var(--accent);
-    padding-bottom: 0.5rem;
+    padding-bottom: .5rem
 }
 
 .info strong {
     color: var(--primary);
-    display: inline-block;
+    display: inline-block
 }
 
 .form-section h1 {
-    font-size: large;
+    font-size: large
 }

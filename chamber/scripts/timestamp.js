@@ -1,3 +1,1 @@
-window.onload = function () {
-    document.getElementById('timestamp').value = new Date().toISOString();
-};
+window.onload = function () { document.getElementById("timestamp").value = (new Date).toISOString() };
