@@ -2,7 +2,7 @@ async function fetchMembersData() { try { var e = await fetch("data/members.json
     const t = document.querySelector(".company-spotlights"); e = getRandomMembers(e, 3); t.innerHTML = "", e.forEach(e => {
         e = `
             <div class="spotlight">
-                <img src="${e.image}" alt="${e.name} Logo" class="member-logo">
+                <img src="${e.image}" alt="${e.name} Logo" class="member-logo" width="100" height="100" loading="lazy">
                 <h3>${e.name}</h3>
                 <p>${e.description}</p>
                 <p>Phone: ${e.phone}</p>

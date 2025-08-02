@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Djinguereber Mosque",
+        "address": "Avenue Moussa Tavele, Timbuktu",
+        "description": "A UNESCO World Heritage site, this mosque is a stunning example of traditional Malian architecture.",
+        "image": "images/djingareiber-cour.webp"
+    },
+    {
+        "name": "Sankore Mosque",
+        "address": "Rue de la Mosquée, Timbuktu",
+        "description": "This mosque was a center of learning in the 14th century and is known for its historical significance.",
+        "image": "images/sankore-mosque.webp"
+    },
+    {
+        "name": "Tomb of Askia",
+        "address": "Tombouctou, Mali",
+        "description": "A mausoleum that showcases the rich history of the Songhai Empire.",
+        "image": "images/tombeau-askia.webp"
+    },
+    {
+        "name": "Niger River",
+        "address": "Timbuktu, Mali",
+        "description": "A vital waterway that has supported the region's economy and culture for centuries.",
+        "image": "images/niger-river.webp"
+    },
+    {
+        "name": "Festival au Désert",
+        "address": "Timbuktu, Mali",
+        "description": "An annual music festival that celebrates the cultural heritage of the region.",
+        "image": "images/festival-au-desert.webp"
+    },
+    {
+        "name": "Timbuktu Manuscripts",
+        "address": "Ahmed Baba Institute, Timbuktu",
+        "description": "A collection of ancient manuscripts that provide insight into the history and culture of the region.",
+        "image": "images/timbuktu-manuscripts.webp"
+    },
+    {
+        "name": "Maison des Esclaves",
+        "address": "Timbuktu, Mali",
+        "description": "A historical site that reflects the region's past and its role in the trans-Saharan slave trade.",
+        "image": "images/maison-des-esclaves.webp"
+    },
+    {
+        "name": "Ksar of Timbuktu",
+        "address": "Timbuktu, Mali",
+        "description": "A collection of ancient buildings that represent the architectural heritage of Timbuktu.",
+        "image": "images/ksar-of-timbuktu.webp"
+    }
+]

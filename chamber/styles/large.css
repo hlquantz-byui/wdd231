@@ -227,6 +227,11 @@
         min-width: 250px
     }
 
+    .spotlight {
+        min-height: 350px;
+        /* Increase from 300px for desktop */
+    }
+
     .form-and-cards-layout {
         display: grid;
         grid-template-columns: 1fr 1fr;

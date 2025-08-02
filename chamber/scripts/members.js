@@ -10,7 +10,7 @@ function displayMembers(members) {
 
         if (isGridView) {
             memberDiv.innerHTML = `
-                <img src="${member.image}" alt="${member.name}" onerror="this.onerror=null; this.src='fallback-image.jpg';">
+                <img src="${member.image}" alt="${member.name}" width="100" height="100" onerror="this.onerror=null; this.src='fallback-image.jpg';" loading="lazy">
                 <div>
                     <h2>${member.name}</h2>
                     <p><strong>Address:</strong> ${member.address}</p>
@@ -39,20 +39,24 @@ listBtn.addEventListener('click', () => {
     membersDiv.classList.remove('grid');
     membersDiv.classList.add('list');
     setActiveView('list');
-    displayMembers(currentMembers);function displayMembers(e){const s=document.getElementById("members"),i=s.classList.contains("grid");s.innerHTML="",e.forEach(e=>{var t=document.createElement("div");t.className="member",i?t.innerHTML=`
-                <img src="${e.image}" alt="${e.name}" onerror="this.onerror=null; this.src='fallback-image.jpg';">
+    displayMembers(currentMembers); function displayMembers(e) {
+        const s = document.getElementById("members"), i = s.classList.contains("grid"); s.innerHTML = "", e.forEach(e => {
+            var t = document.createElement("div"); t.className = "member", i ? t.innerHTML = `
+                <img src="${e.image}" alt="${e.name}" width="100" height="100" onerror="this.onerror=null; this.src='fallback-image.jpg';">
                 <div>
                     <h2>${e.name}</h2>
                     <p><strong>Address:</strong> ${e.address}</p>
                     <p><strong>Phone:</strong> ${e.phone}</p>
                     <p><strong>Website:</strong> <a href="${e.website}" target="_blank">${e.website}</a></p>
                 </div>
-            `:t.innerHTML=`
+            `: t.innerHTML = `
                 <div>${e.name}</div>
                 <div>${e.address}</div>
                 <div>${e.phone}</div>
                 <div><a href="${e.website}" target="_blank">${e.website}</a></div>
-            `,s.appendChild(t)})}const membersDiv=document.getElementById("members"),listBtn=document.getElementById("listViewBtn"),gridBtn=document.getElementById("gridViewBtn");function setActiveView(e){var t=document.getElementById("listViewBtn"),s=document.getElementById("gridViewBtn");("list"===e?(t.classList.add("active"),s):(s.classList.add("active"),t)).classList.remove("active")}listBtn.addEventListener("click",()=>{membersDiv.classList.remove("grid"),membersDiv.classList.add("list"),setActiveView("list"),displayMembers(currentMembers)}),gridBtn.addEventListener("click",()=>{membersDiv.classList.remove("list"),membersDiv.classList.add("grid"),setActiveView("grid"),displayMembers(currentMembers)});let currentMembers=[];async function fetchMembers(){try{var e=await fetch("data/members.json");if(!e.ok)throw new Error("Network response was not ok");displayMembers(currentMembers=await e.json())}catch(e){console.error("Fetch error:",e),membersDiv.innerHTML="<p>Failed to load members. Please try again later.</p>"}}document.addEventListener("DOMContentLoaded",()=>{fetchMembers(),setActiveView("grid")}),document.addEventListener("DOMContentLoaded",()=>{fetchMembers()});
+            `, s.appendChild(t)
+        })
+    } const membersDiv = document.getElementById("members"), listBtn = document.getElementById("listViewBtn"), gridBtn = document.getElementById("gridViewBtn"); function setActiveView(e) { var t = document.getElementById("listViewBtn"), s = document.getElementById("gridViewBtn"); ("list" === e ? (t.classList.add("active"), s) : (s.classList.add("active"), t)).classList.remove("active") } listBtn.addEventListener("click", () => { membersDiv.classList.remove("grid"), membersDiv.classList.add("list"), setActiveView("list"), displayMembers(currentMembers) }), gridBtn.addEventListener("click", () => { membersDiv.classList.remove("list"), membersDiv.classList.add("grid"), setActiveView("grid"), displayMembers(currentMembers) }); let currentMembers = []; async function fetchMembers() { try { var e = await fetch("data/members.json"); if (!e.ok) throw new Error("Network response was not ok"); displayMembers(currentMembers = await e.json()) } catch (e) { console.error("Fetch error:", e), membersDiv.innerHTML = "<p>Failed to load members. Please try again later.</p>" } } document.addEventListener("DOMContentLoaded", () => { fetchMembers(), setActiveView("grid") }), document.addEventListener("DOMContentLoaded", () => { fetchMembers() });
 });
 
 gridBtn.addEventListener('click', () => {

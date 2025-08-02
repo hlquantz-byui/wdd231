@@ -1,0 +1,100 @@
+.card1 {
+    grid-area: card1
+}
+
+.card2 {
+    grid-area: card2
+}
+
+.card3 {
+    grid-area: card3
+}
+
+.card4 {
+    grid-area: card4
+}
+
+.card5 {
+    grid-area: card5
+}
+
+.card6 {
+    grid-area: card6
+}
+
+.card7 {
+    grid-area: card7
+}
+
+.card8 {
+    grid-area: card8
+}
+
+.place-card {
+    min-width: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: .75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    margin: 5px 0;
+    overflow-wrap: break-word;
+    min-height: 350px
+}
+
+.place-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: .5rem;
+    transition: transform .3s ease, box-shadow .3s ease
+}
+
+.place-card figure {
+    height: 200px;
+    overflow: hidden;
+    margin: 0 0 1rem;
+    border-radius: .5rem
+}
+
+.card-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    min-height: 600px
+}
+
+@media (max-width:640px) {
+    .card-container {
+        grid-template-areas: "card1" "card2" "card3" "card4" "card5" "card6" "card7" "card8";
+        max-width: 641px
+    }
+}
+
+@media (min-width:641px) and (max-width:1024px) {
+    .card-container {
+        grid-template-areas: "card1 card2 card3" "card4 card5 card6" "card7 card8 .";
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px
+    }
+}
+
+@media (min-width:1025px) {
+    .card-container {
+        grid-template-areas: "card1 card2 card3 card4" "card5 card6 card7 card8";
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px
+    }
+}
+
+@media (min-width:641px) {
+    .place-card img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+        cursor: pointer
+    }
+}

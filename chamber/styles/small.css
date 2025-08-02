@@ -29,6 +29,8 @@ header {
 }
 
 header img {
+    width: 50px;
+    height: 50px;
     max-width: 150px;
     height: auto;
     max-height: 50px;
@@ -48,7 +50,8 @@ nav {
     background-color: var(--accent);
     z-index: 1000;
     text-align: center;
-    line-height: 40px
+    line-height: 40px;
+    min-height: 50px;
 }
 
 nav.show {
@@ -83,6 +86,8 @@ nav a.active {
     border: none;
     color: #fff;
     cursor: pointer;
+    width: 40px;
+    height: 40px
 }
 
 .hamburger::before {
@@ -99,12 +104,17 @@ h2 {
     color: var(--text-primary)
 }
 
+main {
+    min-height: 500px;
+}
+
 footer {
     text-align: left;
     padding: 20px;
     background-color: var(--accent);
     color: #fff;
-    width: 100%
+    width: 100%;
+    min-height: 100px
 }
 
 .social-media {
@@ -132,7 +142,8 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--accent);
-    width: 100%
+    width: 100%;
+    min-height: 100px;
 }
 
 .member {
@@ -367,7 +378,8 @@ footer {
     box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
     padding: 20px;
     box-sizing: border-box;
-    text-align: center
+    text-align: center;
+    min-height: 300px
 }
 
 .member-logo {
@@ -773,4 +785,62 @@ input[type=submit]:hover {
 
 .form-section h1 {
     font-size: large
+}
+
+.place-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: var(--background-muted);
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    border-radius: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px
+}
+
+.place-card button {
+    background-color: var(--button);
+    color: var(--text-primary);
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 15px
+}
+
+.place-card img {
+    border-radius: 10px
+}
+
+.visit-message {
+    background-color: var(--background-muted);
+    color: var(--text-primary);
+    padding: 1rem 2rem 1rem 1rem;
+    position: relative;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--accent);
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto
+}
+
+.visit-message .close-btn {
+    background: 0 0;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 0 .5rem;
+    line-height: 1
+}
+
+.hidden {
+    display: none
 }
