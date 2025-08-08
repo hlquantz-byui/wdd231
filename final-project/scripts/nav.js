@@ -1,0 +1,1 @@
+function setupNavigationToggle() { var e = document.querySelector(".toggle-menu"); const t = document.getElementById("main-nav"); e.addEventListener("click", () => { t.classList.toggle("hidden") }), t.querySelectorAll("a").forEach(e => { e.addEventListener("click", () => { window.innerWidth < 768 && t.classList.add("hidden") }) }) } export { setupNavigationToggle };

@@ -1,0 +1,380 @@
+[
+    {
+        "title": "Spaghetti Carbonara",
+        "ingredients": [
+            "200g spaghetti",
+            "100g pancetta",
+            "2 large eggs",
+            "50g pecorino cheese",
+            "Salt and pepper",
+            "Fresh parsley"
+        ],
+        "instructions": [
+            "Cook spaghetti in salted boiling water until al dente.",
+            "Fry pancetta until crispy.",
+            "Beat eggs and mix with cheese, salt, and pepper.",
+            "Combine spaghetti with pancetta and remove from heat.",
+            "Stir in egg mixture quickly to create a creamy sauce.",
+            "Serve with parsley."
+        ],
+        "cooking_time": "20 minutes",
+        "difficulty": "Easy",
+        "cuisine": "Italian"
+    },
+    {
+        "title": "Chicken Tikka Masala",
+        "ingredients": [
+            "500g chicken breast",
+            "200g yogurt",
+            "2 tbsp tikka masala paste",
+            "400g chopped tomatoes",
+            "1 onion",
+            "2 garlic cloves",
+            "Fresh coriander"
+        ],
+        "instructions": [
+            "Marinate chicken in yogurt and tikka paste for 1 hour.",
+            "Cook onion and garlic until soft.",
+            "Add chicken and cook until browned.",
+            "Stir in tomatoes and simmer for 20 minutes.",
+            "Garnish with coriander and serve."
+        ],
+        "cooking_time": "1 hour 30 minutes",
+        "difficulty": "Medium",
+        "cuisine": "Indian"
+    },
+    {
+        "title": "Vegetable Stir-Fry",
+        "ingredients": [
+            "200g broccoli",
+            "1 bell pepper",
+            "2 carrots",
+            "100g snap peas",
+            "2 tbsp soy sauce",
+            "1 tbsp sesame oil",
+            "Sesame seeds"
+        ],
+        "instructions": [
+            "Chop vegetables into bite-sized pieces.",
+            "Heat sesame oil in a pan.",
+            "Add vegetables and stir-fry for 5-7 minutes.",
+            "Pour in soy sauce and cook for another 2 minutes.",
+            "Serve with sesame seeds on top."
+        ],
+        "cooking_time": "15 minutes",
+        "difficulty": "Easy",
+        "cuisine": "Asian"
+    },
+    {
+        "title": "Beef Tacos",
+        "ingredients": [
+            "500g ground beef",
+            "1 onion",
+            "2 garlic cloves",
+            "1 tbsp taco seasoning",
+            "Taco shells",
+            "Lettuce, tomato, cheese"
+        ],
+        "instructions": [
+            "Cook onion and garlic until soft.",
+            "Add ground beef and cook until browned.",
+            "Stir in taco seasoning and cook for 5 minutes.",
+            "Serve in taco shells with toppings."
+        ],
+        "cooking_time": "25 minutes",
+        "difficulty": "Easy",
+        "cuisine": "Mexican"
+    },
+    {
+        "title": "Caprese Salad",
+        "ingredients": [
+            "2 large tomatoes",
+            "200g mozzarella cheese",
+            "Fresh basil",
+            "Olive oil",
+            "Balsamic vinegar",
+            "Salt and pepper"
+        ],
+        "instructions": [
+            "Slice tomatoes and mozzarella.",
+            "Layer them with basil leaves.",
+            "Drizzle with olive oil and balsamic vinegar.",
+            "Season with salt and pepper."
+        ],
+        "cooking_time": "10 minutes",
+        "difficulty": "Easy",
+        "cuisine": "Italian"
+    },
+    {
+        "title": "Chocolate Chip Cookies",
+        "ingredients": [
+            "125g butter",
+            "100g sugar",
+            "1 egg",
+            "200g flour",
+            "100g chocolate chips",
+            "1 tsp vanilla extract"
+        ],
+        "instructions": [
+            "Preheat oven to 180°C.",
+            "Cream butter and sugar together.",
+            "Add egg and vanilla, mix well.",
+            "Stir in flour and chocolate chips.",
+            "Scoop onto baking sheet and bake for 10-12 minutes."
+        ],
+        "cooking_time": "30 minutes",
+        "difficulty": "Easy",
+        "cuisine": "American"
+    },
+    {
+        "title": "Lemon Garlic Shrimp",
+        "ingredients": [
+            "400g shrimp",
+            "2 garlic cloves",
+            "1 lemon",
+            "2 tbsp olive oil",
+            "Salt and pepper",
+            "Fresh parsley"
+        ],
+        "instructions": [
+            "Heat olive oil in a pan.",
+            "Add minced garlic and cook for 1 minute.",
+            "Add shrimp, salt, and pepper, and cook until pink.",
+            "Squeeze lemon juice over shrimp and garnish with parsley."
+        ],
+        "cooking_time": "15 minutes",
+        "difficulty": "Easy",
+        "cuisine": "Mediterranean"
+    },
+    {
+        "title": "Mushroom Risotto",
+        "ingredients": [
+            "200g arborio rice",
+            "500ml vegetable broth",
+            "100g mushrooms",
+            "1 onion",
+            "50g parmesan cheese",
+            "2 tbsp olive oil"
+        ],
+        "instructions": [
+            "Heat olive oil and cook onion until soft.",
+            "Add mushrooms and cook for 5 minutes.",
+            "Stir in arborio rice and cook for 2 minutes.",
+            "Gradually add broth, stirring until absorbed.",
+            "Finish with parmesan cheese."
+        ],
+        "cooking_time": "30 minutes",
+        "difficulty": "Medium",
+        "cuisine": "Italian"
+    },
+    {
+        "title": "Pancakes",
+        "ingredients": [
+            "200g flour",
+            "2 tbsp sugar",
+            "1 tbsp baking powder",
+            "1 egg",
+            "300ml milk",
+            "Butter for frying"
+        ],
+        "instructions": [
+            "Mix flour, sugar, and baking powder in a bowl.",
+            "In another bowl, whisk egg and milk together.",
+            "Combine wet and dry ingredients.",
+            "Heat butter in a pan and pour in batter.",
+            "Cook until bubbles form, then flip and cook until golden."
+        ],
+        "cooking_time": "20 minutes",
+        "difficulty": "Easy",
+        "cuisine": "American"
+    },
+    {
+        "title": "Beef Stroganoff",
+        "ingredients": [
+            "500g beef strips",
+            "1 onion",
+            "200g mushrooms",
+            "200ml sour cream",
+            "2 tbsp flour",
+            "2 tbsp olive oil",
+            "Salt and pepper"
+        ],
+        "instructions": [
+            "Heat oil in a pan and cook onion until soft.",
+            "Add beef strips and cook until browned.",
+            "Stir in mushrooms and cook for 5 minutes.",
+            "Sprinkle flour and mix well.",
+            "Add sour cream, salt, and pepper, and simmer for 10 minutes."
+        ],
+        "cooking_time": "30 minutes",
+        "difficulty": "Medium",
+        "cuisine": "Russian"
+    },
+    {
+        "title": "Quiche Lorraine",
+        "ingredients": [
+            "1 pie crust",
+            "200g bacon",
+            "3 eggs",
+            "200ml cream",
+            "100g cheese",
+            "Salt and pepper"
+        ],
+        "instructions": [
+            "Preheat oven to 180°C.",
+            "Cook bacon until crispy.",
+            "Whisk eggs and cream together, season with salt and pepper.",
+            "Spread bacon in pie crust, pour egg mixture over, and top with cheese.",
+            "Bake for 30-35 minutes."
+        ],
+        "cooking_time": "50 minutes",
+        "difficulty": "Medium",
+        "cuisine": "French"
+    },
+    {
+        "title": "Chili Con Carne",
+        "ingredients": [
+            "500g ground beef",
+            "1 onion",
+            "2 garlic cloves",
+            "400g canned tomatoes",
+            "1 can kidney beans",
+            "2 tbsp chili powder",
+            "Salt and pepper"
+        ],
+        "instructions": [
+            "Cook onion and garlic until soft.",
+            "Add ground beef and cook until browned.",
+            "Stir in tomatoes, beans, and chili powder.",
+            "Simmer for 30 minutes, season with salt and pepper."
+        ],
+        "cooking_time": "45 minutes",
+        "difficulty": "Medium",
+        "cuisine": "Mexican"
+    },
+    {
+        "title": "Banana Bread",
+        "ingredients": [
+            "3 ripe bananas",
+            "200g sugar",
+            "2 eggs",
+            "200g flour",
+            "100g butter",
+            "1 tsp baking soda"
+        ],
+        "instructions": [
+            "Preheat oven to 175°C.",
+            "Mash bananas and mix with sugar and eggs.",
+            "Stir in melted butter, flour, and baking soda.",
+            "Pour into a loaf pan and bake for 60 minutes."
+        ],
+        "cooking_time": "1 hour 15 minutes",
+        "difficulty": "Easy",
+        "cuisine": "American"
+    },
+    {
+        "title": "Beef Wellington",
+        "ingredients": [
+            "1.5 kg beef tenderloin",
+            "500g mushrooms",
+            "200g prosciutto",
+            "1 puff pastry sheet",
+            "2 egg yolks",
+            "2 tbsp Dijon mustard",
+            "Salt and pepper"
+        ],
+        "instructions": [
+            "Sear the beef in a hot pan and let it cool.",
+            "Finely chop mushrooms and sauté until moisture evaporates.",
+            "Wrap the beef in prosciutto and mushroom mixture.",
+            "Roll in puff pastry, brush with egg yolk, and bake at 200°C for 25-30 minutes."
+        ],
+        "cooking_time": "1 hour 30 minutes",
+        "difficulty": "Hard",
+        "cuisine": "British"
+    },
+    {
+        "title": "Ratatouille",
+        "ingredients": [
+            "1 eggplant",
+            "2 zucchinis",
+            "1 bell pepper",
+            "1 onion",
+            "2 tomatoes",
+            "2 cloves garlic",
+            "Olive oil, salt, and pepper"
+        ],
+        "instructions": [
+            "Dice all vegetables.",
+            "Sauté onion and garlic in olive oil until soft.",
+            "Add remaining vegetables and cook until tender.",
+            "Season with salt and pepper, and serve warm."
+        ],
+        "cooking_time": "40 minutes",
+        "difficulty": "Easy",
+        "cuisine": "French"
+    },
+    {
+        "title": "Pad Thai",
+        "ingredients": [
+            "200g rice noodles",
+            "200g shrimp or chicken",
+            "2 eggs",
+            "3 tbsp fish sauce",
+            "2 tbsp tamarind paste",
+            "1 tbsp sugar",
+            "Bean sprouts, peanuts, and lime for garnish"
+        ],
+        "instructions": [
+            "Soak rice noodles in hot water until soft.",
+            "Stir-fry shrimp or chicken until cooked.",
+            "Push to the side, scramble eggs, then mix with noodles.",
+            "Add fish sauce, tamarind, and sugar, and stir-fry for 2 minutes.",
+            "Serve garnished with bean sprouts, peanuts, and lime."
+        ],
+        "cooking_time": "30 minutes",
+        "difficulty": "Medium",
+        "cuisine": "Thai"
+    },
+    {
+        "title": "Tiramisu",
+        "ingredients": [
+            "250g mascarpone cheese",
+            "3 eggs",
+            "100g sugar",
+            "200ml coffee",
+            "200g ladyfinger biscuits",
+            "Cocoa powder for dusting"
+        ],
+        "instructions": [
+            "Whisk egg yolks and sugar until creamy.",
+            "Fold in mascarpone cheese.",
+            "Dip ladyfingers in coffee and layer in a dish.",
+            "Spread mascarpone mixture over layers, repeat, and chill for 4 hours.",
+            "Dust with cocoa powder before serving."
+        ],
+        "cooking_time": "20 minutes (plus chilling time)",
+        "difficulty": "Medium",
+        "cuisine": "Italian"
+    },
+    {
+        "title": "Greek Salad",
+        "ingredients": [
+            "2 large tomatoes",
+            "1 cucumber",
+            "1 red onion",
+            "200g feta cheese",
+            "Olives",
+            "Olive oil, oregano, salt, and pepper"
+        ],
+        "instructions": [
+            "Chop tomatoes, cucumber, and onion into bite-sized pieces.",
+            "Combine in a bowl with olives and feta cheese.",
+            "Drizzle with olive oil, sprinkle with oregano, salt, and pepper.",
+            "Toss gently and serve."
+        ],
+        "cooking_time": "10 minutes",
+        "difficulty": "Easy",
+        "cuisine": "Greek"
+    }
+]

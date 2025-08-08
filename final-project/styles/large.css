@@ -1,33 +1,99 @@
-@media only screen and (min-width: 38rem) {
-    /* Add desktop-specific styles here */
+@media only screen and (min-width: 768px) {
 
     body {
         padding: 0 24px;
-        /* Increased padding for larger screens */
+        max-width: 900px;
     }
 
     header {
         grid-template-columns: 48px auto 64px;
-        /* Adjust header layout for larger screens */
     }
+
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 24px;
+        background: none;
+        position: static;
+        flex-direction: row;
+    }
+
+    nav.hidden {
+        display: flex;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
 
     h1 {
         font-size: 2.5rem;
-        /* Larger heading size */
     }
 
     h2 {
         font-size: 2rem;
-        /* Larger subheading size */
     }
 
     button {
         padding: 12px 20px;
-        /* Larger button size */
     }
 
     .wireframes img {
         max-width: 100%;
-        /* Ensure images are responsive */
     }
+
+    .toggle-menu {
+        display: none;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+    }
+
+    .wireframes {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .wireframes img {
+        max-width: 48%;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        min-width: 900px;
+    }
+
+    .card {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal {
+        padding: 24px;
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+
+    .interact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
 }

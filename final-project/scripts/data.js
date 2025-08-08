@@ -1,0 +1,1 @@
+async function fetchRecipes() { try { var e = await fetch("data/recipes.json"); if (e.ok) return await e.json(); throw new Error("Network response was not ok") } catch (e) { return console.error("Fetch error:", e), [] } } export { fetchRecipes };

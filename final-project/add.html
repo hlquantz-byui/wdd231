@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Recipe Haven | Add a Recipe</title>
+    <meta name="description"
+        content="Add your favorite recipe to the Recipe Haven collection and share it with others!" />
+    <meta name="author" content="Hunter Quantz" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Add a Recipe | Recipe Haven" />
+    <meta property="og:description" content="Share your favorite dish with the Recipe Haven community." />
+    <meta property="og:image" content="images/food.svg" />
+    <meta property="og:url" content="https://hlquantz-byui.github.io/wdd231/final-project/index.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)" />
+
+    <script type="module" src="scripts/save-recipe.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/get-year.js" defer></script>
+    <script src="scripts/get-last-modified.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/food.svg" alt="Recipe Haven logo" loading="lazy" />
+        <h1>Recipe Haven</h1>
+        <button class="toggle-menu" aria-label="Toggle navigation" aria-controls="main-nav"
+            aria-expanded="false">&#8801;</button>
+    </header>
+
+    <nav class="hidden" id="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="add.html" class="active" aria-current="page">Add Recipe</a>
+    </nav>
+
+    <main>
+        <section class="form-section">
+            <h2>Submit Your Recipe</h2>
+            <form action="form-success.html" method="get" id="recipe-form">
+                <label for="name">Recipe Name:</label>
+                <input type="text" id="name" name="name" required aria-required="true"
+                    placeholder="e.g., Spaghetti Carbonara" />
+
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" name="difficulty" required aria-required="true">
+                    <option value="" selected>Select</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+
+                <label for="cuisine">Cuisine Type:</label>
+                <input type="text" id="cuisine" name="cuisine" required aria-required="true"
+                    placeholder="e.g., Italian" />
+
+                <label for="ingredients">Ingredients (comma-separated):</label>
+                <textarea id="ingredients" name="ingredients" rows="4" required aria-required="true"
+                    placeholder="e.g., pasta, eggs, parmesan, bacon"></textarea>
+
+                <label for="instructions">Cooking Instructions (one per line):</label>
+                <textarea id="instructions" name="instructions" rows="6" required aria-required="true"
+                    placeholder="e.g. Boil pasta..."></textarea>
+
+                <button type="submit" class="btn">Submit Recipe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span></p>
+                <p>Hunter Quantz</p>
+                <p>United States of America</p>
+            </div>
+            <div class="social-media">
+                <a href="https://github.com/hlquantz-byui" target="_blank">
+                    <img src="images/github.svg" alt="GitHub Icon" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/hunter-q/" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn Icon" loading="lazy">
+                </a>
+                <a href="mailto:hquantz@byupathway.edu">
+                    <img src="images/email.svg" alt="Email Icon" loading="lazy">
+                </a>
+            </div>
+
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

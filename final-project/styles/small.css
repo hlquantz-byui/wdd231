@@ -2,15 +2,15 @@
     --color-background: #34403a;
     --color-text-primary: #ffffff;
     --color-text-secondary: #285238;
-    --color-accent: #04e824;
+    --color-accent: #00571D;
     --color-highlight: #18ff6d;
-    --color-heading: #1DD755;
+    --color-heading: #1DD755
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
@@ -19,7 +19,79 @@ body {
     font-family: 'Open Sans', sans-serif;
     padding: 0 12px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    position: relative
+}
+
+nav a {
+    padding: 5px;
+    margin: 5px;
+    transition: transform .3s ease
+}
+
+nav a:hover {
+    background-color: var(--color-highlight);
+    color: var(--color-text-secondary);
+    border-radius: 10px;
+    transform: scale(1.1)
+}
+
+nav a.active:hover {
+    background-color: transparent;
+    color: inherit;
+    border-radius: 0;
+    transform: scale(1)
+}
+
+nav a.active {
+    border-bottom: 1px solid #fff
+}
+
+nav.hidden {
+    display: none
+}
+
+.toggle-menu {
+    font-size: 1.8rem;
+    background: 0 0;
+    border: none;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    padding: 10px
+}
+
+.nav-toggle {
+    background: 0 0;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    cursor: pointer
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px
+}
+
+.nav-menu a {
+    padding: 10px;
+    background-color: var(--color-text-secondary);
+    border-radius: 4px;
+    text-align: center
+}
+
+.nav-menu.open {
+    display: flex
 }
 
 header {
@@ -27,26 +99,41 @@ header {
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 5px 10px;
     align-items: end;
-    border-bottom: solid 1px var(--color-text-secondary);
-    column-gap: 8px;
+    border-bottom: solid 3px var(--color-text-secondary);
+    column-gap: 8px
 }
 
 header img {
     display: block;
     width: 100%;
-    height: auto;
+    height: auto
 }
 
 h1,
 h2,
 h3 {
     color: var(--color-heading);
-    font-family: Merriweather, serif;
+    font-family: Merriweather, serif
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-top: 20px
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 16px
+}
+
+main {
+    padding: 10px 0;
+    line-height: 1.6
 }
 
 a {
-    color: var(--color-accent);
-    text-decoration: none;
+    color: var(--color-text-primary);
+    text-decoration: none
 }
 
 button {
@@ -56,58 +143,678 @@ button {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color .3s;
+    transition: background-color .3s
 }
 
 button:hover {
-    background-color: var(--color-highlight);
+    background-color: var(--color-highlight)
 }
 
 footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 20px;
     width: 100%;
+    max-width: 900px;
+    border-top: solid 3px var(--color-text-secondary);
+    min-width: 100px
 }
 
 .footer-top {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 100%;
+    justify-content: space-evenly
 }
 
 .social-media {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .social-media a {
     margin: 0 10px;
-    transition: transform .3s;
+    transition: transform .3s
 }
 
 .social-media img {
     width: 40px;
-    height: 40px;
+    height: 40px
 }
 
 .social-media img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
 .footer-info {
-    text-align: center;
+    text-align: center
 }
 
 .wireframes {
     display: flex;
-    flex-direction: row;
+    flex-direction: row
 }
 
 .wireframes img {
     max-width: 50%;
+    padding: 10px
+}
+
+.recipe-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0
+}
+
+.recipe-card {
+    background-color: #285238;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+    transition: transform .2s;
+    margin: 15px
+}
+
+.recipe-card:hover {
+    transform: scale(1.02)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: 4px
+}
+
+input,
+select,
+textarea {
     padding: 10px;
+    border: 1px solid var(--color-heading);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999
+}
+
+.modal-content {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    margin: auto
+}
+
+.modal-content h3 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5rem
+}
+
+.modal-content p,
+h4,
+ol,
+ul {
+    margin-left: 30px;
+    margin-bottom: 10px
+}
+
+.modal.show {
+    display: flex
+}
+
+.hero {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 10vw;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 10px
+}
+
+.hero-content h1 {
+    font-size: 6vw;
+    margin-bottom: 10px
+}
+
+.hero-text p {
+    font-size: 4vw
+}
+
+.cta-button {
+    margin-top: 10px;
+    background-color: var(--color-highlight);
+    color: var(--color-background);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color .5s, transform .2s
+}
+
+.cta-button:hover {
+    background-color: var(--color-text-secondary);
+    color: var(--color-text-primary);
+    transform: translateY(-5px)
+}
+
+.cta-button:active {
+    transform: translateY(0)
+}
+
+.interact a {
+    background-color: var(--color-accent);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform .5s
+}
+
+.interact a:hover {
+    transform: scale(1.2)
+}
+
+select {
+    background-color: var(--color-heading)
+}
+
+fieldset {
+    border: none;
+    margin: 0 auto
+}
+
+fieldset legend {
+    text-align: center;
+    margin-bottom: 10px
+}
+
+:root {
+    --color-background: #34403a;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #285238;
+    --color-accent: #00571D;
+    --color-highlight: #18ff6d;
+    --color-heading: #1DD755
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 12px;
+    max-width: 900px;
+    margin: 0 auto
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    position: relative
+}
+
+nav a {
+    padding: 5px;
+    margin: 5px;
+    transition: transform .3s ease
+}
+
+nav a:hover {
+    background-color: var(--color-highlight);
+    color: var(--color-text-secondary);
+    border-radius: 10px;
+    transform: scale(1.1)
+}
+
+nav a.active:hover {
+    background-color: transparent;
+    color: inherit;
+    border-radius: 0;
+    transform: scale(1)
+}
+
+nav a.active {
+    border-bottom: 1px solid #fff
+}
+
+nav.hidden {
+    display: none
+}
+
+.toggle-menu {
+    font-size: 1.8rem;
+    background: 0 0;
+    border: none;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    padding: 10px
+}
+
+.nav-toggle {
+    background: 0 0;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    cursor: pointer
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px
+}
+
+.nav-menu a {
+    padding: 10px;
+    background-color: var(--color-text-secondary);
+    border-radius: 4px;
+    text-align: center
+}
+
+.nav-menu.open {
+    display: flex
+}
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 3px var(--color-text-secondary);
+    column-gap: 8px
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-heading);
+    font-family: Merriweather, serif
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-top: 20px
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 16px
+}
+
+main {
+    padding: 10px 0;
+    line-height: 1.6
+}
+
+a {
+    color: var(--color-text-primary);
+    text-decoration: none
+}
+
+button {
+    background-color: var(--color-accent);
+    color: var(--color-text-primary);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s
+}
+
+button:hover {
+    background-color: var(--color-highlight)
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    border-top: solid 3px var(--color-text-secondary);
+    min-width: 100px
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px
+}
+
+.social-media a {
+    margin: 0 10px;
+    transition: transform .3s
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px
+}
+
+.social-media img:hover {
+    transform: scale(1.1)
+}
+
+.footer-info {
+    text-align: center
+}
+
+.wireframes {
+    display: flex;
+    flex-direction: row
+}
+
+.wireframes img {
+    max-width: 50%;
+    padding: 10px
+}
+
+.recipe-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0
+}
+
+.recipe-card {
+    background-color: #285238;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+    transition: transform .2s;
+    margin: 15px
+}
+
+.recipe-card:hover {
+    transform: scale(1.02)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: 4px
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid var(--color-heading);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999
+}
+
+.modal-content {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    margin: auto
+}
+
+.modal-content h3 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5rem
+}
+
+.modal-content p,
+h4,
+ol,
+ul {
+    margin-left: 30px;
+    margin-bottom: 10px
+}
+
+.modal.show {
+    display: flex
+}
+
+.hero {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 10vw;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 10px
+}
+
+.hero-content h1 {
+    font-size: 6vw;
+    margin-bottom: 10px
+}
+
+.hero-text p {
+    font-size: 4vw
+}
+
+.cta-button {
+    margin-top: 10px;
+    background-color: var(--color-highlight);
+    color: var(--color-background);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color .5s, transform .2s
+}
+
+.cta-button:hover {
+    background-color: var(--color-text-secondary);
+    color: var(--color-text-primary);
+    transform: translateY(-5px)
+}
+
+.cta-button:active {
+    transform: translateY(0)
+}
+
+.interact a {
+    background-color: var(--color-accent);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform .5s
+}
+
+.interact a:hover {
+    transform: scale(1.2)
+}
+
+select {
+    background-color: var(--color-heading)
+}
+
+fieldset {
+    border: none;
+    margin: 0 auto
+}
+
+fieldset legend {
+    text-align: center;
+    margin-bottom: 10px
+}
+
+.success-section {
+    padding: 2rem;
+    max-width: 600px;
+    text-align: center;
+    margin: 2rem auto;
+    animation: fadeIn 1s ease-in-out
+}
+
+.success-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-highlight);
+    margin-bottom: 1rem
+}
+
+.success-section p {
+    font-size: 1.2rem;
+    margin: .5rem 0;
+    animation: slideIn .5s ease-in-out forwards
+}
+
+.success-section .btn {
+    background-color: var(--color-text-primary);
+    color: var(--color-background);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color .3s ease, transform .3s ease;
+    margin-top: 1rem
+}
+
+.success-section .btn:hover {
+    background-color: #45a049;
+    color: var(--color-text-primary);
+    transform: scale(1.05)
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Recipe Haven | Recipes</title>
+    <meta name="description"
+        content="Browse all recipes by cuisine and difficulty. View full ingredients and instructions at Recipe Haven." />
+    <meta name="author" content="Hunter Quantz" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Browse Recipes | Recipe Haven" />
+    <meta property="og:description" content="Explore our growing collection of delicious recipes at Recipe Haven." />
+    <meta property="og:image" content="images/food.svg" />
+    <meta property="og:url" content="https://hlquantz-byui.github.io/wdd231/final-project/index.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)" />
+
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/get-year.js" defer></script>
+    <script src="scripts/get-last-modified.js" defer></script>
+</head>
+
+<body class="recipes">
+    <header>
+        <img src="images/food.svg" alt="Recipe Haven logo" loading="lazy">
+        <h1>Recipe Haven</h1>
+        <button class="toggle-menu" aria-label="Toggle navigation">&#8801;</button>
+    </header>
+
+    <nav class="hidden" id="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="recipes.html" class="active">Recipes</a>
+        <a href="add.html">Add Recipe</a>
+    </nav>
+
+    <main>
+        <section class="filters">
+            <h2>Filter Recipes</h2>
+            <form id="filter-form">
+                <fieldset>
+                    <legend>Filter recipes by difficulty and cuisine</legend>
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty" name="difficulty">
+                        <option value="">All</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+
+                    <label for="cuisine">Cuisine:</label>
+                    <select id="cuisine" name="cuisine"></select>
+                </fieldset>
+            </form>
+        </section>
+
+        <div id="all-recipes-container" aria-live="polite"></div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span></p>
+                <p>Hunter Quantz</p>
+                <p>United States of America</p>
+            </div>
+            <div class="social-media">
+                <a href="https://github.com/hlquantz-byui" target="_blank">
+                    <img src="images/github.svg" alt="GitHub Icon" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/hunter-q/" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn Icon" loading="lazy">
+                </a>
+                <a href="mailto:hquantz@byupathway.edu">
+                    <img src="images/email.svg" alt="Email Icon" loading="lazy">
+                </a>
+            </div>
+
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- Modal (hidden by default) -->
+    <div id="recipe-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        tabindex="-1">
+        <div class="modal-content">
+            <button class="close-button" aria-label="Close modal">&times;</button>
+            <h2 id="modal-title">Recipe Title</h2>
+            <p id="modal-instructions">Instructions will appear here...</p>
+        </div>
+    </div>
+</body>
+
+</html>

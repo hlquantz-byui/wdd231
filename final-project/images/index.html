@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta Information -->
+    <title>Recipe Haven | Home</title>
+    <meta name="description"
+        content="Recipe Haven is your home for delicious recipes. Browse, share, and discover new dishes by cuisine or difficulty." />
+    <meta name="author" content="Hunter Quantz" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Recipe Haven" />
+    <meta property="og:description" content="Discover, share, and cook your favorite recipes at Recipe Haven." />
+    <meta property="og:image" content="images/food.svg" />
+    <meta property="og:url" content="https://hlquantz-byui.github.io/wdd231/final-project/index.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)" />
+
+    <script type="module" src="scripts/main.js" defer></script>
+    <script src="scripts/get-year.js" defer></script>
+    <script src="scripts/get-last-modified.js" defer></script>
+</head>
+
+<body class="home">
+    <header>
+        <img src="images/food.svg" alt="Recipe Haven logo">
+        <h1>Recipe Haven</h1>
+        <button class="toggle-menu" aria-label="Toggle navigation">&#8801;</button>
+    </header>
+
+    <nav class="hidden" id="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="add.html">Add Recipe</a>
+    </nav>
+
+    <main>
+        <section class="intro hero">
+            <img src="images/hero.webp" alt="A tray of barbeque" width="900">
+            <div class="hero-content">
+                <h2>Welcome to Recipe Haven</h2>
+                <p>Recipe Haven is a cozy place for cooking enthusiasts to explore, add, and share mouthwatering recipes
+                    from all around the world.</p>
+                <p>Browse featured recipes, filter by difficulty or cuisine, and even contribute your own culinary
+                    creations.</p>
+                <a class="cta-button" href="recipes.html">Browse Now</a>
+            </div>
+        </section>
+
+        <section class="featured-recipes">
+            <h2>Featured Recipes</h2>
+            <div id="recipe-container" class="recipe-grid"></div>
+            <div class="interact">
+                <a href="recipes.html" class="btn">View All Recipes</a>
+                <a href="add.html">Submit Your Recipe</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="social-media">
+                <a href="https://github.com/hlquantz-byui" target="_blank">
+                    <img src="images/github.svg" alt="GitHub Icon">
+                </a>
+                <a href="https://www.linkedin.com/in/hunter-q/" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn Icon">
+                </a>
+                <a href="mailto:hquantz@byupathway.edu">
+                    <img src="images/email.svg" alt="Email Icon">
+                </a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span></p>
+                <p>Hunter Quantz</p>
+                <p>United States of America</p>
+            </div>
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

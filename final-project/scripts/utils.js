@@ -1,0 +1,1 @@
+function getRandomItems(t, e = 3) { return [...t].sort(() => .5 - Math.random()).slice(0, e) } export { getRandomItems };
